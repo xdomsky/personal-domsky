@@ -33,6 +33,11 @@ const BtnSign = styled.button`
     @media screen and (max-width: 768px) {
         padding: 5px 15px;
         font-size: 1rem;
+        white-space: nowrap;
+        -webkit-transition: color 0s;
+        -o-transition: color 0s;
+        -moz-transition: color 0s;
+        transition: color 0s;
     }
 `
 const BtnBound = styled.div`
@@ -61,7 +66,22 @@ const BtnBound = styled.div`
     }
     @media screen and (max-width: 768px) {
         span {
+            &:hover {
+                position: relative;
+                display: inline-block;
+                -webkit-animation: wt-btn_sign-marquee 0s linear infinite;
+                -moz-animation: wt-btn_sign-marquee 0s linear infinite;
+                -o-animation: wt-btn_sign-marquee 0s linear infinite;
+                animation: wt-btn_sign-marquee 0s linear infinite;
+            }
+        }
+        span {
             padding: 0 22px;
+        }
+        span {
+            &:after {
+                display: none;
+            }
         }
     }
 `
@@ -90,7 +110,7 @@ const Landing = () => {
     }
 
     return (
-        <Container>
+        <Container id="home">
             <div className="wrap">
                 <div className="line">
                     <div className="left">

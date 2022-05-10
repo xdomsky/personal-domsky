@@ -2,8 +2,29 @@ import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 import "./style.css";
+import gsap from "gsap";
 
 const Header = ({ history }) => {
+  useEffect(() => {
+    gsap.fromTo('.logo', {
+      opacity: 0,
+      x: -100
+    },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1
+      });
+    gsap.fromTo('.menu', {
+      opacity: 0,
+      x: 100
+    },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1
+      });
+  }, []);
   const [state, setState] = useState({
     initial: false,
     clicked: null,

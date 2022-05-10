@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styled from 'styled-components'
 import img1 from "./01.png";
 import img2 from "./02.png";
 import img3 from "./03.png";
 import img4 from "./04.png";
+
 
 const ContainerWork = styled.section``
 const Container = styled.div`
@@ -176,6 +179,121 @@ const ItemLink = styled.a`
     }
 `
 const Work = () => {
+    gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+
+
+
+        // SECTION 1
+        gsap.fromTo('.left-work', {
+            opacity: 0,
+            x: "-100%",
+            skewY: 10
+        },
+            {
+                scrollTrigger: ".left-work",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+        gsap.fromTo('.right-work', {
+            opacity: 0,
+            x: "100%",
+            skewY: -10
+        },
+            {
+                scrollTrigger: ".right-work",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+
+
+
+        // SECTION 2
+        gsap.fromTo('.left-work2', {
+            opacity: 0,
+            x: "-100%",
+            skewY: -10
+        },
+            {
+                scrollTrigger: ".left-work2",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+        gsap.fromTo('.right-work2', {
+            opacity: 0,
+            x: "100%",
+            skewY: 10
+        },
+            {
+                scrollTrigger: ".right-work2",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+
+
+
+        // SECTION 3
+        gsap.fromTo('.left-work3', {
+            opacity: 0,
+            x: "-100%",
+            skewY: 10
+        },
+            {
+                scrollTrigger: ".left-work3",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+        gsap.fromTo('.right-work3', {
+            opacity: 0,
+            x: "100%",
+            skewY: -10
+        },
+            {
+                scrollTrigger: ".right-work3",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+
+
+
+        // SECTION 4
+        gsap.fromTo('.left-work4', {
+            opacity: 0,
+            x: "-100%",
+            skewY: -10
+        },
+            {
+                scrollTrigger: ".left-work4",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+        gsap.fromTo('.right-work4', {
+            opacity: 0,
+            x: "100%",
+            skewY: 10
+        },
+            {
+                scrollTrigger: ".right-work4",
+                opacity: 1,
+                x: 0,
+                duration: 2,
+                skewY: 0
+            });
+    }, []);
     return (
         <ContainerWork id="works">
             <NumberTitle>
@@ -183,14 +301,14 @@ const Work = () => {
             </NumberTitle>
             <Container>
                 <LinkStyle>
-                    <ImageItem>
+                    <ImageItem className="left-work">
                         <Item>
                             <Image>
                                 <img src={img1} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer>
+                    <TextContainer className="right-work">
                         <TextContent>
                             <Title>
                                 <h1>ANMAR-MEBLE</h1>
@@ -199,7 +317,7 @@ const Work = () => {
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="/project01">Preview Project</ItemLink><ItemLink href="https://github.com/" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
@@ -207,7 +325,7 @@ const Work = () => {
                     </TextContainer>
                 </LinkStyle>
                 <LinkStyle>
-                    <TextContainer2>
+                    <TextContainer2 className="left-work2">
                         <TextContent>
                             <Title>
                                 <h1>TERRANITA</h1>
@@ -216,20 +334,20 @@ const Work = () => {
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="/project02">Preview Project</ItemLink><ItemLink href="https://github.com/" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
                         </TextContent>
                     </TextContainer2>
-                    <ImageItem>
+                    <ImageItem className="right-work2">
                         <Item>
                             <Image>
                                 <img src={img2} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer3>
+                    <TextContainer3 className="left-work2">
                         <TextContent>
                             <Title>
                                 <h1>TERRANITA</h1>
@@ -238,7 +356,7 @@ const Work = () => {
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="/project02">Preview Project</ItemLink><ItemLink href="https://github.com/" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
@@ -246,14 +364,14 @@ const Work = () => {
                     </TextContainer3>
                 </LinkStyle>
                 <LinkStyle>
-                    <ImageItem>
+                    <ImageItem className="left-work3">
                         <Item>
                             <Image>
                                 <img src={img3} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer>
+                    <TextContainer className="right-work3">
                         <TextContent>
                             <Title>
                                 <h1>ECOLOGY SITE</h1>
@@ -262,7 +380,7 @@ const Work = () => {
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="/project03">Preview Project</ItemLink><ItemLink href="https://github.com/" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
@@ -270,7 +388,7 @@ const Work = () => {
                     </TextContainer>
                 </LinkStyle>
                 <LinkStyle>
-                    <TextContainer2>
+                    <TextContainer2 className="left-work4">
                         <TextContent>
                             <Title>
                                 <h1>SHOP TABLES</h1>
@@ -279,20 +397,20 @@ const Work = () => {
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="/project04">Preview Project</ItemLink><ItemLink href="https://github.com/" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
                         </TextContent>
                     </TextContainer2>
-                    <ImageItem>
+                    <ImageItem className="right-work4">
                         <Item>
                             <Image>
                                 <img src={img4} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer3>
+                    <TextContainer3 className="left-work4">
                         <TextContent>
                             <Title>
                                 <h1>SHOP TABLES</h1>
@@ -301,7 +419,7 @@ const Work = () => {
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="/project04">Preview Project</ItemLink><ItemLink href="https://github.com/" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>

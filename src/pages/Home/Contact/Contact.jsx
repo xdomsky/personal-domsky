@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import styled from 'styled-components';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ContainerContact = styled.section``
 const Container = styled.div`
@@ -136,14 +138,42 @@ const ItemLink = styled.a`
     }
 `
 const Contact = () => {
+    gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        // SECTION 1
+        gsap.fromTo('.buttons', {
+            opacity: 0,
+            y: "100%",
+            skewY: 10
+        },
+            {
+                scrollTrigger: ".buttons",
+                opacity: 1,
+                y: 0,
+                duration: 2,
+                skewY: 0
+            });
+        gsap.fromTo('.buttons2', {
+            opacity: 0,
+            y: "100%",
+            skewY: -10
+        },
+            {
+                scrollTrigger: ".buttons2",
+                opacity: 1,
+                y: 0,
+                duration: 2,
+                skewY: 0
+            });
+    }, []);
     return (
         <ContainerContact id="contact">
             <NumberTitle>
                 <span>03/</span>
             </NumberTitle>
             <Button>
-                <span>WANT TO WORK <br />TOGETHER ?</span>
-                <a href='/contact'>SEND ME A <br />MESSAGE →</a>
+                <span className="buttons">WANT TO WORK <br />TOGETHER ?</span>
+                <a href='/contact' className="buttons2">SEND ME A <br />MESSAGE →</a>
             </Button>
             <Container>
                 <h1><a href="mailto:veguspl@gmail.com">veguspl@gmail.com</a></h1>
