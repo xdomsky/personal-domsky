@@ -1,0 +1,178 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const ContainerContact = styled.section``
+const Container = styled.div`
+    // margin-top: 10vw;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+    width: 100%;
+    h1 {
+        color: white;
+        font-size: 5vw;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        a {
+            color: var(--text-color);
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        h1{
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+`
+const Button = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    span {
+        font-size: 2vw;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+    a {
+        font-size: 2vw;
+        font-weight: 500;
+        color: var(--text-color);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        span {
+            font-size: 3vw;
+            font-weight: 500;
+        }
+        a {
+            font-size: 3vw;
+            font-weight: 500;
+        }
+    }
+`
+const Footer = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-size: 1.2vw;
+    @media screen and (max-width: 1024px) {
+        justify-content: center;
+        flex-direction: column;
+        font-size: 3vw;
+    }
+`
+const Name = styled.div`
+`
+const Socials = styled.div`
+    display: flex;
+    @media screen and (max-width: 1024px) {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+    a {
+        margin: 1rem;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+`
+const NumberTitle = styled.div`
+    span {
+        font-size: 2vw;
+        color: var(--main-color);
+        font-weight: 700;
+        font-family: "Bai Jamjuree", sans-serif;
+    }
+    @media screen and (max-width: 768px) {
+        span {
+            font-size: 4vw;
+            font-weight: 700;
+            font-family: "Bai Jamjuree", sans-serif;
+        }
+    }
+`
+const LinkTest = styled.div`
+    display: flex;
+    align-items: center;
+`
+const ItemTest = styled.div`
+
+`
+const ItemLink = styled.a`
+    color: #fff;
+    display: inline-flex;
+    z-index: 1;
+    position: relative;
+    text-decoration: none;
+    margin: 10px;
+    &:before {
+        content: '';
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        left: -10px;
+        height: 50%;
+        width: 0;
+        background: var(--main-color);
+        z-index: -1;
+        transition: 0.3s;
+    }
+    &:hover {
+        &:before {
+            width: calc(100% + 20px);
+        }
+    }
+`
+const Contact = () => {
+    return (
+        <ContainerContact id="contact">
+            <NumberTitle>
+                <span>03/</span>
+            </NumberTitle>
+            <Button>
+                <span>WANT TO WORK <br />TOGETHER ?</span>
+                <a href='/contact'>SEND ME A <br />MESSAGE →</a>
+            </Button>
+            <Container>
+                <h1><a href="mailto:veguspl@gmail.com">veguspl@gmail.com</a></h1>
+                <Footer>
+                    <Name>
+                        <span>Dominik Dąbrowski<br />
+                            Creative developer</span>
+                    </Name>
+                    <Socials>
+                        <LinkTest>
+                            <ItemTest>
+                                <ItemLink href="https://github.com/xdomsky" target="_blank">GitHub</ItemLink>
+                            </ItemTest>
+                        </LinkTest>
+                        <LinkTest>
+                            <ItemTest>
+                                <ItemLink href="https://twitter.com/xdomsky" target="_blank">Twitter</ItemLink>
+                            </ItemTest>
+                        </LinkTest>
+                        <LinkTest>
+                            <ItemTest>
+                                <ItemLink href="https://www.instagram.com/xdomskyy/" target="_blank">Instagram</ItemLink>
+                            </ItemTest>
+                        </LinkTest>
+                    </Socials>
+                </Footer>
+            </Container>
+        </ContainerContact>
+    )
+}
+
+export default Contact
