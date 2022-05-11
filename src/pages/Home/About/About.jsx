@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitText from "../../../utils/Split3.min";
 
 const Container = styled.section`
+    color: var(--text-color);
 `
 const NumberTitle = styled.div`
     span {
@@ -79,18 +83,63 @@ const HeadTitle = styled.div`
     }
 `
 const About = () => {
+    gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        const split = new SplitText(".TAnim", { type: "lines" });
+        const split2 = new SplitText(".TAnim2", { type: "lines" });
+        gsap.fromTo(split.lines, {
+            duration: 2,
+            y: "100%",
+            opacity: 0,
+        },
+            {
+                scrollTrigger: ".TAnim",
+                opacity: 1,
+                y: 0,
+                duration: 2,
+                stagger: 0.2,
+                ease: "power4.out",
+            });
+
+
+        gsap.fromTo(split2.lines, {
+            duration: 2,
+            y: "100%",
+            opacity: 0,
+        },
+            {
+                scrollTrigger: ".TAnim2",
+                opacity: 1,
+                y: 0,
+                duration: 2,
+                stagger: 0.2,
+                ease: "power4.out",
+                delay: 1
+            });
+
+        gsap.fromTo('.Title', {
+            opacity: 0,
+            y: "-100%",
+        },
+            {
+                scrollTrigger: ".Title",
+                opacity: 1,
+                y: 0,
+                duration: 1,
+            });
+    }, []);
     return (
         <Container id="about">
             <NumberTitle>
                 <span>01/</span>
             </NumberTitle>
-            <HeadTitle>
+            <HeadTitle className='Title'>
                 <h1>Hello i'm Dominik</h1>
                 <span>Dominik Dąbrowski</span>
             </HeadTitle>
             <TextContainer>
-                <Span1>PASSIONATE ABOUT WEB TECHNOLOGIES. I LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY INTERFACES. I CREATE MEMORABLE WEB EXPERIENCES.</Span1><br /><br /><br />
-                <Span2>WHEN I'M NOT BUILDING OR EXPLORING NEW WEB EXPERIENCES, I'M PROBABLY PLAYING GAMES OR WATCHING NETFLIX.</Span2>
+                <Span1 className='TAnim'>PASSIONATE ABOUT WEB TECHNOLOGIES. I LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY INTERFACES. I CREATE MEMORABLE WEB EXPERIENCES.</Span1><br />
+                <Span2 className='TAnim2'>WHEN I'M NOT BUILDING OR EXPLORING NEW WEB EXPERIENCES, I'M PROBABLY PLAYING GAMES OR WATCHING NETFLIX.</Span2>
             </TextContainer>
         </Container>
     )

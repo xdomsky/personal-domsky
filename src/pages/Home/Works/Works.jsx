@@ -49,6 +49,7 @@ const LinkStyle = styled.div`
     padding: 0px 4vw;
     color: var(--text-color);
     text-decoration: none;
+    overflow: hidden;
     @media screen and (max-width: 768px) {
         padding: 0px 10vw;
         flex-direction: column;
@@ -185,25 +186,25 @@ const Work = () => {
 
 
         // SECTION 1
-        gsap.fromTo('.left-work', {
+        gsap.fromTo('.LAnim', {
             opacity: 0,
             x: "-100%",
             skewY: 10
         },
             {
-                scrollTrigger: ".left-work",
+                scrollTrigger: ".LAnim",
                 opacity: 1,
                 x: 0,
                 duration: 2,
                 skewY: 0
             });
-        gsap.fromTo('.right-work', {
+        gsap.fromTo('.RAnim', {
             opacity: 0,
             x: "100%",
             skewY: -10
         },
             {
-                scrollTrigger: ".right-work",
+                scrollTrigger: ".RAnim",
                 opacity: 1,
                 x: 0,
                 duration: 2,
@@ -213,25 +214,25 @@ const Work = () => {
 
 
         // SECTION 2
-        gsap.fromTo('.left-work2', {
+        gsap.fromTo('.LAnim2', {
             opacity: 0,
             x: "-100%",
             skewY: -10
         },
             {
-                scrollTrigger: ".left-work2",
+                scrollTrigger: ".LAnim2",
                 opacity: 1,
                 x: 0,
                 duration: 2,
                 skewY: 0
             });
-        gsap.fromTo('.right-work2', {
+        gsap.fromTo('.RAnim2', {
             opacity: 0,
             x: "100%",
             skewY: 10
         },
             {
-                scrollTrigger: ".right-work2",
+                scrollTrigger: ".RAnim2",
                 opacity: 1,
                 x: 0,
                 duration: 2,
@@ -241,25 +242,25 @@ const Work = () => {
 
 
         // SECTION 3
-        gsap.fromTo('.left-work3', {
+        gsap.fromTo('.LAnim3', {
             opacity: 0,
             x: "-100%",
             skewY: 10
         },
             {
-                scrollTrigger: ".left-work3",
+                scrollTrigger: ".LAnim3",
                 opacity: 1,
                 x: 0,
                 duration: 2,
                 skewY: 0
             });
-        gsap.fromTo('.right-work3', {
+        gsap.fromTo('.RAnim3', {
             opacity: 0,
             x: "100%",
             skewY: -10
         },
             {
-                scrollTrigger: ".right-work3",
+                scrollTrigger: ".RAnim3",
                 opacity: 1,
                 x: 0,
                 duration: 2,
@@ -269,25 +270,25 @@ const Work = () => {
 
 
         // SECTION 4
-        gsap.fromTo('.left-work4', {
+        gsap.fromTo('.LAnim4', {
             opacity: 0,
             x: "-100%",
             skewY: -10
         },
             {
-                scrollTrigger: ".left-work4",
+                scrollTrigger: ".LAnim4",
                 opacity: 1,
                 x: 0,
                 duration: 2,
                 skewY: 0
             });
-        gsap.fromTo('.right-work4', {
+        gsap.fromTo('.RAnim4', {
             opacity: 0,
             x: "100%",
             skewY: 10
         },
             {
-                scrollTrigger: ".right-work4",
+                scrollTrigger: ".RAnim4",
                 opacity: 1,
                 x: 0,
                 duration: 2,
@@ -301,14 +302,14 @@ const Work = () => {
             </NumberTitle>
             <Container>
                 <LinkStyle>
-                    <ImageItem className="left-work">
+                    <ImageItem className="LAnim">
                         <Item>
                             <Image>
                                 <img src={img1} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer className="right-work">
+                    <TextContainer className="RAnim">
                         <TextContent>
                             <Title>
                                 <h1>ANMAR-MEBLE</h1>
@@ -325,7 +326,7 @@ const Work = () => {
                     </TextContainer>
                 </LinkStyle>
                 <LinkStyle>
-                    <TextContainer2 className="left-work2">
+                    <TextContainer2 className="LAnim2">
                         <TextContent>
                             <Title>
                                 <h1>TERRANITA</h1>
@@ -340,14 +341,14 @@ const Work = () => {
                             </Para>
                         </TextContent>
                     </TextContainer2>
-                    <ImageItem className="right-work2">
+                    <ImageItem className="RAnim2">
                         <Item>
                             <Image>
                                 <img src={img2} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer3 className="left-work2">
+                    <TextContainer3 className="LAnim2">
                         <TextContent>
                             <Title>
                                 <h1>TERRANITA</h1>
@@ -364,14 +365,14 @@ const Work = () => {
                     </TextContainer3>
                 </LinkStyle>
                 <LinkStyle>
-                    <ImageItem className="left-work3">
+                    <ImageItem className="LAnim3">
                         <Item>
                             <Image>
                                 <img src={img3} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer className="right-work3">
+                    <TextContainer className="RAnim3">
                         <TextContent>
                             <Title>
                                 <h1>ECOLOGY SITE</h1>
@@ -388,7 +389,7 @@ const Work = () => {
                     </TextContainer>
                 </LinkStyle>
                 <LinkStyle>
-                    <TextContainer2 className="left-work4">
+                    <TextContainer2 className="LAnim4">
                         <TextContent>
                             <Title>
                                 <h1>SHOP TABLES</h1>
@@ -403,14 +404,14 @@ const Work = () => {
                             </Para>
                         </TextContent>
                     </TextContainer2>
-                    <ImageItem className="right-work4">
+                    <ImageItem className="RAnim4">
                         <Item>
                             <Image>
                                 <img src={img4} alt="" />
                             </Image>
                         </Item>
                     </ImageItem>
-                    <TextContainer3 className="left-work4">
+                    <TextContainer3 className="LAnim4">
                         <TextContent>
                             <Title>
                                 <h1>SHOP TABLES</h1>

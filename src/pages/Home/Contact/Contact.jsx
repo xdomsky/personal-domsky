@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const ContainerContact = styled.section``
+const ContainerContact = styled.section`
+
+`
 const Container = styled.div`
     // margin-top: 10vw;
     // display: flex;
@@ -64,6 +66,7 @@ const Button = styled.div`
     }
 `
 const Footer = styled.div`
+    overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -141,29 +144,89 @@ const Contact = () => {
     gsap.registerPlugin(ScrollTrigger);
     useEffect(() => {
         // SECTION 1
-        gsap.fromTo('.buttons', {
+        gsap.fromTo('.LAnim', {
             opacity: 0,
             y: "100%",
             skewY: 10
         },
             {
-                scrollTrigger: ".buttons",
+                scrollTrigger: ".LAnim",
                 opacity: 1,
                 y: 0,
-                duration: 2,
+                duration: 1,
                 skewY: 0
             });
-        gsap.fromTo('.buttons2', {
+        gsap.fromTo('.LAnim2', {
             opacity: 0,
             y: "100%",
             skewY: -10
         },
             {
-                scrollTrigger: ".buttons2",
+                scrollTrigger: ".LAnim2",
                 opacity: 1,
                 y: 0,
-                duration: 2,
+                duration: 1,
                 skewY: 0
+            });
+
+
+
+        gsap.fromTo('.MAnim', {
+            opacity: 0,
+            y: "100%",
+        },
+            {
+                scrollTrigger: ".MAnim",
+                opacity: 1,
+                y: 0,
+                duration: 1,
+            });
+
+
+
+        gsap.fromTo('.BAnim0', {
+            opacity: 0,
+            y: "100%",
+        },
+            {
+                scrollTrigger: ".BAnim0",
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.3
+            });
+        gsap.fromTo('.BAnim', {
+            opacity: 0,
+            y: "100%",
+        },
+            {
+                scrollTrigger: ".BAnim",
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.6
+            });
+        gsap.fromTo('.BAnim2', {
+            opacity: 0,
+            y: "100%",
+        },
+            {
+                scrollTrigger: ".BAnim2",
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.9
+            });
+        gsap.fromTo('.BAnim3', {
+            opacity: 0,
+            y: "100%",
+        },
+            {
+                scrollTrigger: ".BAnim3",
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 1.2
             });
     }, []);
     return (
@@ -172,28 +235,30 @@ const Contact = () => {
                 <span>03/</span>
             </NumberTitle>
             <Button>
-                <span className="buttons">WANT TO WORK <br />TOGETHER ?</span>
-                <a href='/contact' className="buttons2">SEND ME A <br />MESSAGE →</a>
+                <span className="LAnim">WANT TO WORK <br />TOGETHER ?</span>
+                <a href='/contact' className="LAnim2">SEND ME A <br />MESSAGE →</a>
             </Button>
             <Container>
-                <h1><a href="mailto:veguspl@gmail.com">veguspl@gmail.com</a></h1>
+                <h1 className="MAnim">
+                    <a href="mailto:veguspl@gmail.com">veguspl@gmail.com</a>
+                </h1>
                 <Footer>
-                    <Name>
+                    <Name className="BAnim0">
                         <span>Dominik Dąbrowski<br />
                             Creative developer</span>
                     </Name>
                     <Socials>
-                        <LinkTest>
+                        <LinkTest className="BAnim">
                             <ItemTest>
                                 <ItemLink href="https://github.com/xdomsky" target="_blank">GitHub</ItemLink>
                             </ItemTest>
                         </LinkTest>
-                        <LinkTest>
+                        <LinkTest className="BAnim2">
                             <ItemTest>
                                 <ItemLink href="https://twitter.com/xdomsky" target="_blank">Twitter</ItemLink>
                             </ItemTest>
                         </LinkTest>
-                        <LinkTest>
+                        <LinkTest className="BAnim3">
                             <ItemTest>
                                 <ItemLink href="https://www.instagram.com/xdomskyy/" target="_blank">Instagram</ItemLink>
                             </ItemTest>
