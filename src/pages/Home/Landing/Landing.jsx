@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
 
 const Container = styled.section`
     height: 100%;
@@ -108,10 +109,31 @@ const Landing = () => {
     function handleWindowResize() {
         width = window.innerWidth;
     }
-
+    useEffect(() => {
+        gsap.fromTo('.TextAnim', {
+            opacity: 0,
+            scale: 0.5
+        },
+            {
+                opacity: 1,
+                scale: 1,
+                duration: 1,
+                delay: 0.3
+            });
+        gsap.fromTo('.TextAnim', {
+            opacity: 0,
+            scale: 0.5
+        },
+            {
+                opacity: 1,
+                scale: 1,
+                duration: 1,
+                delay: 0.3
+            });
+    }, []);
     return (
         <Container id="home">
-            <div className="wrap">
+            <div className="wrap TextAnim">
                 <div className="line">
                     <div className="left">
                         <div className="content">
