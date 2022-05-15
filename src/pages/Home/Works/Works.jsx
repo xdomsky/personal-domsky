@@ -73,11 +73,11 @@ const Item = styled.div`
 const Image = styled.div`
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         transition: 1s;
     }
 `
@@ -329,13 +329,13 @@ const Work = () => {
                     <TextContainer2 className="LAnim2">
                         <TextContent>
                             <Title>
-                                <h1>TERRANITA</h1>
+                                <h1>CAR DEALER</h1>
                             </Title>
                             <Para>
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="https://komisdomsky.000webhostapp.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky/cardealer" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
@@ -351,13 +351,13 @@ const Work = () => {
                     <TextContainer3 className="LAnim2">
                         <TextContent>
                             <Title>
-                                <h1>TERRANITA</h1>
+                                <h1>CAR DEALER</h1>
                             </Title>
                             <Para>
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="https://komisdomsky.000webhostapp.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky/cardealer" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
@@ -375,13 +375,13 @@ const Work = () => {
                     <TextContainer className="RAnim3">
                         <TextContent>
                             <Title>
-                                <h1>ECOLOGY SITE</h1>
+                                <h1>Translator</h1>
                             </Title>
                             <Para>
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="https://translatordomsky.netlify.app/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky/translator" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
@@ -392,13 +392,13 @@ const Work = () => {
                     <TextContainer2 className="LAnim4">
                         <TextContent>
                             <Title>
-                                <h1>SHOP TABLES</h1>
+                                <h1>GAME CARD</h1>
                             </Title>
                             <Para>
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="https://gamecarddomsky.netlify.app/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky/gamecard" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
@@ -414,13 +414,13 @@ const Work = () => {
                     <TextContainer3 className="LAnim4">
                         <TextContent>
                             <Title>
-                                <h1>SHOP TABLES</h1>
+                                <h1>GAME CARD</h1>
                             </Title>
                             <Para>
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="http://www.anmar-meble.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="https://gamecarddomsky.netlify.app/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky/gamecard" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
