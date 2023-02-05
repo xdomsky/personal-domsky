@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
+
+.container {
+    margin: 0 auto;
+}
+
+.container .wrapper .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container .wrapper .home p {
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.container .wrapper .home h5 {
+    margin-top: 260px;
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 360px;
+}
+
+header {
+    height: 100px;
+}
+
+header .inner-header {
+    position: fixed;
+    z-index: 13;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 48px;
+    mix-blend-mode: difference;
+}
+
+header .inner-header .logo a {
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+header .inner-header .menu button {
+    color: var(--main-color);
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+header .hamburger-menu {
+    display: none;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+header .hamburger-menu .menu-secondary-background-color {
+    background: #191919;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+header .hamburger-menu .menu-layer {
+    position: relative;
+    background: var(--main-color);
+    height: 100%;
+    overflow: hidden;
+}
+
+header .hamburger-menu .menu-layer .menu-city-background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: backgroundEffect;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+header .hamburger-menu .menu-layer .wrapper {
+    position: relative;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 200px;
+    padding: 0 48px;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav {
+    display: block;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li {
+    list-style: none;
+    font-size: 6rem;
+    font-weight: 700;
+    height: 135px;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li a {
+    position: absolute;
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li a:hover {
+    color: #191919;
+}
+
+header .hamburger-menu .menu-layer .wrapper .locations {
+    position: absolute;
+    bottom: -80px;
+    color: var(--background-color);
+    margin-top: 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+header .hamburger-menu .menu-layer .wrapper .locations span {
+    font-weight: 400;
+    margin: 0 32px;
+    transition: 0.3s ease-in-out;
+}
+
+header .hamburger-menu .menu-layer .wrapper .locations span a {
+    text-decoration: none;
+    color: var(--background-color);
+}
+
+header .hamburger-menu .menu-layer .wrapper .locations span:first-child {
+    margin-left: 32px;
+}
+
+header .hamburger-menu .menu-layer .wrapper .locations span:hover {
+    color: var(--background-color);
+    background: var(--text-color);
+    padding: 8px 24px;
+    border-radius: 4px;
+}
+
+@keyframes backgroundEffect {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 40% 10%;
+    }
+
+    50% {
+        background-position: 0 10%;
+    }
+
+    75% {
+        background-position: 10% 40%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .inner-header .logo a {
+        font-size: 1.2rem;
+    }
+
+    header .inner-header .menu button {
+        font-size: 1.2rem;
+    }
+
+    header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li {
+        list-style: none;
+        font-size: 3rem;
+        height: 80px;
+        width: 200px;
+    }
+
+    header .hamburger-menu .menu-layer .wrapper .locations {
+        font-size: 1rem;
+    }
+
+
+    header .hamburger-menu .menu-layer .wrapper .locations span {
+        margin: 0 12px;
+    }
+
+    header .hamburger-menu .menu-layer .wrapper .locations span:first-child {
+        margin-left: 0px;
+    }
+}
