@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Container = styled.section`
     height: 100%;
@@ -87,6 +89,7 @@ const BtnBound = styled.div`
     }
 `
 const Landing = () => {
+    AOS.init();
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', handleWindowResize);
 
@@ -109,31 +112,9 @@ const Landing = () => {
     function handleWindowResize() {
         width = window.innerWidth;
     }
-    useEffect(() => {
-        gsap.fromTo('.TextAnim', {
-            opacity: 0,
-            scale: 0.5
-        },
-            {
-                opacity: 1,
-                scale: 1,
-                duration: 1,
-                delay: 0.3
-            });
-        gsap.fromTo('.TextAnim', {
-            opacity: 0,
-            scale: 0.5
-        },
-            {
-                opacity: 1,
-                scale: 1,
-                duration: 1,
-                delay: 0.3
-            });
-    }, []);
     return (
         <Container id="home">
-            <div className="wrap TextAnim">
+            <div className="wrap TextAnim" data-aos="zoom-in" data-aos-duration="1500">
                 <div className="line">
                     <div className="left">
                         <div className="content">

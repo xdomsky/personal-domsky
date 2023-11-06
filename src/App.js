@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
+import Hobby from "./pages/Hobby/Hobby";
 import Page404 from "./pages/Page404";
 import Navbar from "./components/Navbar/Header";
 import styled from 'styled-components';
@@ -64,6 +65,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/hobby" component={Hobby} />
           <Route component={Page404} />
         </Switch>
         <FooterFix>

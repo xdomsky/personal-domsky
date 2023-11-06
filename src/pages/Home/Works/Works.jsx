@@ -6,6 +6,8 @@ import img1 from "./01.png";
 import img2 from "./02.png";
 import img3 from "./03.png";
 import img4 from "./04.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const ContainerWork = styled.section``
@@ -186,126 +188,127 @@ const ItemLink = styled.a`
     }
 `
 const Work = () => {
-    gsap.registerPlugin(ScrollTrigger);
-    useEffect(() => {
+    AOS.init();
+    // gsap.registerPlugin(ScrollTrigger);
+    // useEffect(() => {
 
-        // SECTION 1
-        gsap.fromTo('.LEFTAnim', {
-            opacity: 0,
-            x: "-100%",
-            skewY: 10
-        },
-            {
-                scrollTrigger: ".LEFTAnim",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
-        gsap.fromTo('.RIGHTAnim', {
-            opacity: 0,
-            x: "100%",
-            skewY: -10
-        },
-            {
-                scrollTrigger: ".RIGHTAnim",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
-
-
-
-        // SECTION 2
-        gsap.fromTo('.LEFTAnim2', {
-            opacity: 0,
-            x: "-100%",
-            skewY: -10
-        },
-            {
-                scrollTrigger: ".LEFTAnim2",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
-        gsap.fromTo('.RIGHTAnim2', {
-            opacity: 0,
-            x: "100%",
-            skewY: 10
-        },
-            {
-                scrollTrigger: ".RIGHTAnim2",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
+    //     // SECTION 1
+    //     gsap.fromTo('.LEFTAnim', {
+    //         opacity: 0,
+    //         x: "-100%",
+    //         skewY: 10
+    //     },
+    //         {
+    //             scrollTrigger: ".LEFTAnim",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
+    //     gsap.fromTo('.RIGHTAnim', {
+    //         opacity: 0,
+    //         x: "100%",
+    //         skewY: -10
+    //     },
+    //         {
+    //             scrollTrigger: ".RIGHTAnim",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
 
 
 
-        // SECTION 3
-        gsap.fromTo('.LEFTAnim3', {
-            opacity: 0,
-            x: "-100%",
-            skewY: 10
-        },
-            {
-                scrollTrigger: ".LEFTAnim3",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
-        gsap.fromTo('.RIGHTAnim3', {
-            opacity: 0,
-            x: "100%",
-            skewY: -10
-        },
-            {
-                scrollTrigger: ".RIGHTAnim3",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
+    //     // SECTION 2
+    //     gsap.fromTo('.LEFTAnim2', {
+    //         opacity: 0,
+    //         x: "-100%",
+    //         skewY: -10
+    //     },
+    //         {
+    //             scrollTrigger: ".LEFTAnim2",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
+    //     gsap.fromTo('.RIGHTAnim2', {
+    //         opacity: 0,
+    //         x: "100%",
+    //         skewY: 10
+    //     },
+    //         {
+    //             scrollTrigger: ".RIGHTAnim2",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
 
 
 
-        // SECTION 4
-        gsap.fromTo('.LEFTAnim4', {
-            opacity: 0,
-            x: "-100%",
-            skewY: -10
-        },
-            {
-                scrollTrigger: ".LEFTAnim4",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
-        gsap.fromTo('.RIGHTAnim4', {
-            opacity: 0,
-            x: "100%",
-            skewY: 10
-        },
-            {
-                scrollTrigger: ".RIGHTAnim4",
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                skewY: 0
-            });
-    }, []);
+    //     // SECTION 3
+    //     gsap.fromTo('.LEFTAnim3', {
+    //         opacity: 0,
+    //         x: "-100%",
+    //         skewY: 10
+    //     },
+    //         {
+    //             scrollTrigger: ".LEFTAnim3",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
+    //     gsap.fromTo('.RIGHTAnim3', {
+    //         opacity: 0,
+    //         x: "100%",
+    //         skewY: -10
+    //     },
+    //         {
+    //             scrollTrigger: ".RIGHTAnim3",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
+
+
+
+    //     // SECTION 4
+    //     gsap.fromTo('.LEFTAnim4', {
+    //         opacity: 0,
+    //         x: "-100%",
+    //         skewY: -10
+    //     },
+    //         {
+    //             scrollTrigger: ".LEFTAnim4",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
+    //     gsap.fromTo('.RIGHTAnim4', {
+    //         opacity: 0,
+    //         x: "100%",
+    //         skewY: 10
+    //     },
+    //         {
+    //             scrollTrigger: ".RIGHTAnim4",
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             skewY: 0
+    //         });
+    // }, []);
     return (
         <ContainerWork id="works">
             <NumberTitle>
                 <span>02/</span>
             </NumberTitle>
             <Container>
-                <LinkStyle>
+                <LinkStyle data-aos="fade-right" data-aos-duration="1500">
                     <ImageItem className="LEFTAnim">
                         <Item>
                             <Image>
@@ -329,7 +332,7 @@ const Work = () => {
                         </TextContent>
                     </TextContainer>
                 </LinkStyle>
-                <LinkStyle>
+                <LinkStyle data-aos="fade-left" data-aos-duration="1500">
                     <TextContainer2 className="LEFTAnim2">
                         <TextContent>
                             <Title>
@@ -361,14 +364,14 @@ const Work = () => {
                                 <p>Website design and developed by DOMSKY</p>
                                 <LinkTest>
                                     <ItemTest>
-                                        <ItemLink href="https://komisdomsky.000webhostapp.com/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky/cardealer" target="_blank">CODE</ItemLink>
+                                        <ItemLink href="https://wklejse.tk/" target="_blank">Preview Project</ItemLink><ItemLink href="https://github.com/xdomsky/wklejse" target="_blank">CODE</ItemLink>
                                     </ItemTest>
                                 </LinkTest>
                             </Para>
                         </TextContent>
                     </TextContainer3>
                 </LinkStyle>
-                <LinkStyle>
+                <LinkStyle data-aos="fade-right" data-aos-duration="1500">
                     <ImageItem className="LEFTAnim3">
                         <Item>
                             <Image>
@@ -392,7 +395,7 @@ const Work = () => {
                         </TextContent>
                     </TextContainer>
                 </LinkStyle>
-                <LinkStyle>
+                <LinkStyle data-aos="fade-left" data-aos-duration="1500">
                     <TextContainer2 className="LEFTAnim4">
                         <TextContent>
                             <Title>

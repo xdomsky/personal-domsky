@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import styled from 'styled-components';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContainerContact = styled.section`
 
@@ -141,104 +143,105 @@ const ItemLink = styled.a`
     }
 `
 const Contact = () => {
-    gsap.registerPlugin(ScrollTrigger);
-    useEffect(() => {
-        // SECTION 1
-        gsap.fromTo('.LAnim', {
-            opacity: 0,
-            y: "100%",
-            skewY: 10
-        },
-            {
-                scrollTrigger: ".LAnim",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                skewY: 0
-            });
-        gsap.fromTo('.LAnim2', {
-            opacity: 0,
-            y: "100%",
-            skewY: -10
-        },
-            {
-                scrollTrigger: ".LAnim2",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                skewY: 0
-            });
+    AOS.init();
+    // gsap.registerPlugin(ScrollTrigger);
+    // useEffect(() => {
+    //     // SECTION 1
+    //     gsap.fromTo('.LAnim', {
+    //         opacity: 0,
+    //         y: "100%",
+    //         skewY: 10
+    //     },
+    //         {
+    //             scrollTrigger: ".LAnim",
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //             skewY: 0
+    //         });
+    //     gsap.fromTo('.LAnim2', {
+    //         opacity: 0,
+    //         y: "100%",
+    //         skewY: -10
+    //     },
+    //         {
+    //             scrollTrigger: ".LAnim2",
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //             skewY: 0
+    //         });
 
 
 
-        gsap.fromTo('.MAnim', {
-            opacity: 0,
-            y: "100%",
-        },
-            {
-                scrollTrigger: ".MAnim",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-            });
+    //     gsap.fromTo('.MAnim', {
+    //         opacity: 0,
+    //         y: "100%",
+    //     },
+    //         {
+    //             scrollTrigger: ".MAnim",
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //         });
 
 
 
-        gsap.fromTo('.BAnim0', {
-            opacity: 0,
-            y: "100%",
-        },
-            {
-                scrollTrigger: ".BAnim0",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                delay: 0.3
-            });
-        gsap.fromTo('.BAnim', {
-            opacity: 0,
-            y: "100%",
-        },
-            {
-                scrollTrigger: ".BAnim",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                delay: 0.6
-            });
-        gsap.fromTo('.BAnim2', {
-            opacity: 0,
-            y: "100%",
-        },
-            {
-                scrollTrigger: ".BAnim2",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                delay: 0.9
-            });
-        gsap.fromTo('.BAnim3', {
-            opacity: 0,
-            y: "100%",
-        },
-            {
-                scrollTrigger: ".BAnim3",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                delay: 1.2
-            });
-    }, []);
+    //     gsap.fromTo('.BAnim0', {
+    //         opacity: 0,
+    //         y: "100%",
+    //     },
+    //         {
+    //             scrollTrigger: ".BAnim0",
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //             delay: 0.3
+    //         });
+    //     gsap.fromTo('.BAnim', {
+    //         opacity: 0,
+    //         y: "100%",
+    //     },
+    //         {
+    //             scrollTrigger: ".BAnim",
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //             delay: 0.6
+    //         });
+    //     gsap.fromTo('.BAnim2', {
+    //         opacity: 0,
+    //         y: "100%",
+    //     },
+    //         {
+    //             scrollTrigger: ".BAnim2",
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //             delay: 0.9
+    //         });
+    //     gsap.fromTo('.BAnim3', {
+    //         opacity: 0,
+    //         y: "100%",
+    //     },
+    //         {
+    //             scrollTrigger: ".BAnim3",
+    //             opacity: 1,
+    //             y: 0,
+    //             duration: 1,
+    //             delay: 1.2
+    //         });
+    // }, []);
     return (
         <ContainerContact id="contact">
             <NumberTitle>
                 <span>03/</span>
             </NumberTitle>
-            <Button>
+            <Button data-aos="fade-down" data-aos-duration="1500">
                 <span className="LAnim">WANT TO WORK <br />TOGETHER ?</span>
                 <a href='/contact' className="LAnim2">SEND ME A <br />MESSAGE →</a>
             </Button>
-            <Container>
+            <Container data-aos="fade-up" data-aos-duration="1500">
                 <h1 className="MAnim">
                     <a href="mailto:veguspl@gmail.com">veguspl@gmail.com</a>
                 </h1>

@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../../../utils/Split3.min";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Container = styled.section`
     color: var(--text-color);
@@ -32,6 +34,13 @@ const Span1 = styled.span`
     font-size: 2.5vw;
     font-weight: 400;
     line-height: 1.4;
+    a {
+        color: var(--main-color);
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
     @media screen and (max-width: 768px) {
         font-size: 4vw;
         font-weight: 500;
@@ -83,63 +92,17 @@ const HeadTitle = styled.div`
     }
 `
 const About = () => {
-    gsap.registerPlugin(ScrollTrigger);
-    useEffect(() => {
-        const split = new SplitText(".TAnim");
-        const split2 = new SplitText(".TAnim2");
-        gsap.fromTo(split.lines, {
-            duration: 1,
-            y: "100%",
-            opacity: 0,
-        },
-            {
-                scrollTrigger: ".TAnim",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.1,
-                ease: "power4.out",
-            });
-
-
-        gsap.fromTo(split2.lines, {
-            duration: 1,
-            y: "100%",
-            opacity: 0,
-        },
-            {
-                scrollTrigger: ".TAnim2",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.1,
-                ease: "power4.out",
-                delay: 1
-            });
-
-        gsap.fromTo('.Title', {
-            opacity: 0,
-            y: "-100%",
-        },
-            {
-                scrollTrigger: ".Title",
-                opacity: 1,
-                y: 0,
-                duration: 1,
-            });
-    }, []);
+    AOS.init();
     return (
         <Container id="about">
             <NumberTitle>
                 <span>01/</span>
             </NumberTitle>
-            <HeadTitle className='Title'>
+            <HeadTitle className='Title' data-aos="fade-down">
                 <h1>Hello i'm Dominik</h1>
-                <span>Dominik Dąbrowski</span>
             </HeadTitle>
-            <TextContainer>
-                <Span1 className='TAnim'>PASSIONATE ABOUT WEB TECHNOLOGIES. I LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY INTERFACES. I CREATE MEMORABLE WEB EXPERIENCES.</Span1><br />
-                <Span2 className='TAnim2'>WHEN I'M NOT BUILDING OR EXPLORING NEW WEB EXPERIENCES, I'M PROBABLY PLAYING GAMES OR WATCHING NETFLIX.</Span2>
+            <TextContainer data-aos="fade-up">
+                <Span1 className='TAnim'>My passion: <a href="/hobby">AUDI A4 B6</a></Span1><br />
             </TextContainer>
         </Container>
     )
